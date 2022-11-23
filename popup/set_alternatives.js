@@ -54,8 +54,6 @@ async function remove(replacementHost) {
     let value = await browser.storage.local.get("alternatives")
     let alternatives = value.alternatives
 
-    console.log(replacementHost)
-    console.log(alternatives.filter(v => v.replacementHost !== replacementHost))
     await browser.storage.local.set({
         alternatives: alternatives.filter(v => v.replacementHost !== replacementHost)
     })

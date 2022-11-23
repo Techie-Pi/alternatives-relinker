@@ -38,14 +38,10 @@ function replaceWithAlternatives(aArray, alternatives) {
         let url = new URL(a.href)
         console.log(url.host)
         for (let alternative of alternatives) {
-            console.log(alternative.host)
             for (let host of alternative.host) {
-                console.log(`${url.host} == ${host}: `, url.host === host)
                 if (url.host === host) {
-                    console.log("needs change")
                     url.host = alternative.replacementHost
                     a.href = url.href
-                    console.log(url.href)
                     break
                 }
             }
