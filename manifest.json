@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "Alternatives ReLinker",
+  "version": "1.0",
+  "description": "Replace things that link to services with alternative frontends",
+  "icons": {
+    "48": "icons/relinker-48.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["scripts/relinker.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "icons/relinker-48.png",
+    "default_title": "Re: Linker",
+    "default_popup": "popup/set_alternatives.html"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "update_url": "https://addons.1416.info/updates.json"
+    }
+  }
+}

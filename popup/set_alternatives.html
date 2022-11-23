@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="set_alternatives.css">
+    <title>Re: Linker</title>
+</head>
+<body style="width: 400px; height: 500px">
+    <div>
+        <h1>Alternatives Re:Linker</h1>
+        <div id="current-alternatives">
+            Loading...
+        </div>
+        <hr>
+        <ul>
+            <li>
+                <label>
+                    Name&nbsp;
+                    <input id="input-name" placeholder="'Service to Alternative'">
+                </label>
+            </li>
+            <li>
+                <label>
+                    Service host&nbsp;
+                    <input id="input-service" placeholder="youtube.com,www.youtube.com">
+                </label>
+            </li>
+            <li>
+                <label>
+                    Alternative host&nbsp;
+                    <input id="input-alternative" placeholder="tube.cadence.moe">
+                </label>
+            </li>
+        </ul>
+        <p>Note: If an entry with the same Alternative host is found, the Service host will be added to the entry's list</p>
+        <button id="add-alternative">Add alternative</button>
+    </div>
+
+<script src="set_alternatives.js"></script>
+</body>
+</html>
